@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Arquivos/diretórios reais são servidos direto pelo Apache
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Todo o resto entra no front controller
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>

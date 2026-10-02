@@ -1,0 +1,13 @@
+.env
+.DS_Store
+*.log
+
+/storage/logs/*
+/storage/tmp/*
+/storage/cache/*
+/storage/uploads/*
+/storage/database/*
+!/storage/**/.gitkeep
+
+/vendor/
+node_modules/
