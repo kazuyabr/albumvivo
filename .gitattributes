@@ -1,0 +1,18 @@
+# Normaliza EOL: o repositório guarda LF sempre.
+# Sem isto, `core.autocrlf=true` no Windows transforma docker/entrypoint.sh em
+# CRLF e o shebang `#!/bin/sh` quebra na imagem Docker.
+* text=auto
+
+*.sh   text eol=lf
+*.sql  text eol=lf
+*.php  text eol=lf
+Dockerfile text eol=lf
+*.yml  text eol=lf
+*.css  text eol=lf
+
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+*.zip  binary
